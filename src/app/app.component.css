@@ -1,0 +1,13 @@
+ngb-datepicker {
+  position: absolute;
+  background-color: red;
+
+  .ngb-dp-header {
+      background-color: rgba(52,104,191,1);
+  }
+
+  select {
+      background-color: rgb(68, 191, 52);
+      color: white;
+  }
+}

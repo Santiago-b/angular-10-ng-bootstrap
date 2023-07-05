@@ -1,0 +1,13 @@
+
+<input class="form-control" placeholder="yyyy-mm-dd"
+    name="dp" [(ngModel)]="model" ngbDatepicker #dp="ngbDatepicker">
+<ng-template ngbDatepickerHeader>
+  <div class='btn-toolbar'>
+    <div class='btn-group'>
+      <button class="btn btn-outline-secondary" (click)="dp.navigateTo(date)" title="Go to current week">Week</button>
+      <button class="btn btn-outline-secondary" (click)="selectToday()" title="Today">Today</button>
+      <button class="btn btn-outline-secondary" (click)="clearDate()" title="Clear">Clear</button>
+    </div>
+  </div>
+</ng-template>
+<button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button">Toggle</button>
