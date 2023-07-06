@@ -7,18 +7,11 @@ import { NgbCalendar, NgbDate, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap'
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  today = this.calendar.getToday();
   model: NgbDateStruct;
-  date: NgbDate;
 
-  constructor(private calendar: NgbCalendar) {}
+	constructor(private calendar: NgbCalendar) {}
 
-  selectToday() {
-    this.model = this.calendar.getToday();
-    this.date = this.calendar.getToday();
-  }
+	isDisabled = (date: NgbDate, current: { month: number; year: number }) => date.month !== current.month;
+	isWeekend = (date: NgbDate) => this.calendar.getWeekday(date) >= 6;
 
-  clearDate() {
-    this.model = null;
-  }
 }
